@@ -1,5 +1,7 @@
 import numpy as np
 
+#sigmoid function
+
 def nonlin(x, deriv=False):
     if(deriv==True):
         return (x*(1-x))
@@ -24,7 +26,7 @@ np.random.seed(1)
 syn0 = 2*np.random.random((3,4)) - 1
 syn1 = 2*np.random.random((4,1)) - 1
 
-#training step
+#training step, FOR cycle to optimize the network
 for j in range(60000):
 
     l0 = X
